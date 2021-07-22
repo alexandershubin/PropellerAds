@@ -1,0 +1,13 @@
+.select {
+  padding: 10px;
+  width: 100%;
+  font-size: 21px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+@media(min-width: 1200px) {
+  .select {
+    max-width: 500px;
+  }
+}

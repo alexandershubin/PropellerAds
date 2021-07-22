@@ -1,0 +1,99 @@
+.form-comment {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+
+  &__wrap {
+    margin: 5px 0;
+
+    &--btn {
+      margin: 0 0 0 auto;
+    }
+  }
+
+  &__input {
+    padding: 10px;
+    outline: none;
+    border: 1px solid black;
+    width: 100%;
+
+    &::placeholder {
+      font-size: 16px;
+      font-family: sans-serif;
+    }
+
+    &--area {
+      resize: none;
+      min-height: 78px;
+    }
+  }
+
+  &__btn {
+    padding: 10px;
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+    max-width: 200px;
+    margin-left: auto;
+    cursor: pointer;
+    transition: ease-in-out .2s;
+    box-shadow: 3px 3px 0 0 #919191;
+    border: 1px solid black;
+    background: #eee;
+  }
+
+  &__error {
+    color: red;
+  }
+}
+
+@media(min-width: 768px) {
+  .form-comment {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__wrap {
+      min-height: 56px;
+      &--area {
+        max-width: 400px;
+        width: 100%;
+      }
+
+      &--email {
+        max-width: 300px;
+        width: 100%;
+      }
+    }
+
+    &__input {
+      min-height: 52px;
+    }
+
+    &__btn {
+      margin-left: 0;
+    }
+  }
+}
+
+@media(min-width: 1200px) {
+  .form-comment {
+    &__wrap {
+      &--area {
+        max-width: 540px;
+      }
+
+      &--email {
+        max-width: 400px;
+      }
+
+      &--btn {
+        margin: 5px 0;
+      }
+    }
+
+    &__btn {
+      min-height: 52px;
+    }
+  }
+}
